@@ -29,17 +29,21 @@ Partial Class CadastroUsuario
         Panel1 = New Panel()
         Titulo = New Label()
         Btn_back = New Button()
-        Label_FirstName = New Label()
-        txtFirstName = New TextBox()
+        Label_Username = New Label()
+        txtUsername = New TextBox()
         Label_dtBirth = New Label()
-        Label_LastName = New Label()
-        txtLastName = New TextBox()
+        Label_Name = New Label()
+        txtName = New TextBox()
         TextBox5 = New TextBox()
         dtBirth = New DateTimePicker()
         CbGender = New ComboBox()
         Label_Gender = New Label()
         CbSelectPerm = New ComboBox()
         Label1 = New Label()
+        Label_password = New Label()
+        txtInputPassword = New TextBox()
+        Label_confirmPassword = New Label()
+        txtInputConfirmPassword = New TextBox()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -98,22 +102,22 @@ Partial Class CadastroUsuario
         Btn_back.TabIndex = 0
         Btn_back.UseVisualStyleBackColor = True
         ' 
-        ' Label_FirstName
+        ' Label_Username
         ' 
-        Label_FirstName.AutoSize = True
-        Label_FirstName.Location = New Point(30, 84)
-        Label_FirstName.Name = "Label_FirstName"
-        Label_FirstName.Size = New Size(89, 15)
-        Label_FirstName.TabIndex = 7
-        Label_FirstName.Text = "Primeiro nome:"
+        Label_Username.AutoSize = True
+        Label_Username.Location = New Point(30, 84)
+        Label_Username.Name = "Label_Username"
+        Label_Username.Size = New Size(50, 15)
+        Label_Username.TabIndex = 7
+        Label_Username.Text = "Usuario:"
         ' 
-        ' txtFirstName
+        ' txtUsername
         ' 
-        txtFirstName.BorderStyle = BorderStyle.FixedSingle
-        txtFirstName.Location = New Point(30, 102)
-        txtFirstName.Name = "txtFirstName"
-        txtFirstName.Size = New Size(153, 23)
-        txtFirstName.TabIndex = 6
+        txtUsername.BorderStyle = BorderStyle.FixedSingle
+        txtUsername.Location = New Point(30, 102)
+        txtUsername.Name = "txtUsername"
+        txtUsername.Size = New Size(153, 23)
+        txtUsername.TabIndex = 6
         ' 
         ' Label_dtBirth
         ' 
@@ -124,22 +128,22 @@ Partial Class CadastroUsuario
         Label_dtBirth.TabIndex = 9
         Label_dtBirth.Text = "Data de nascimento:"
         ' 
-        ' Label_LastName
+        ' Label_Name
         ' 
-        Label_LastName.AutoSize = True
-        Label_LastName.Location = New Point(189, 84)
-        Label_LastName.Name = "Label_LastName"
-        Label_LastName.Size = New Size(71, 15)
-        Label_LastName.TabIndex = 11
-        Label_LastName.Text = "Sobrenome:"
+        Label_Name.AutoSize = True
+        Label_Name.Location = New Point(189, 84)
+        Label_Name.Name = "Label_Name"
+        Label_Name.Size = New Size(43, 15)
+        Label_Name.TabIndex = 11
+        Label_Name.Text = "Nome:"
         ' 
-        ' txtLastName
+        ' txtName
         ' 
-        txtLastName.BorderStyle = BorderStyle.FixedSingle
-        txtLastName.Location = New Point(189, 102)
-        txtLastName.Name = "txtLastName"
-        txtLastName.Size = New Size(326, 23)
-        txtLastName.TabIndex = 10
+        txtName.BorderStyle = BorderStyle.FixedSingle
+        txtName.Location = New Point(189, 102)
+        txtName.Name = "txtName"
+        txtName.Size = New Size(326, 23)
+        txtName.TabIndex = 10
         ' 
         ' TextBox5
         ' 
@@ -183,7 +187,7 @@ Partial Class CadastroUsuario
         ' 
         CbSelectPerm.FormattingEnabled = True
         CbSelectPerm.Items.AddRange(New Object() {"Administrador", "Usuario"})
-        CbSelectPerm.Location = New Point(30, 197)
+        CbSelectPerm.Location = New Point(465, 197)
         CbSelectPerm.Name = "CbSelectPerm"
         CbSelectPerm.Size = New Size(153, 23)
         CbSelectPerm.TabIndex = 16
@@ -191,28 +195,66 @@ Partial Class CadastroUsuario
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(30, 179)
+        Label1.Location = New Point(465, 179)
         Label1.Name = "Label1"
         Label1.Size = New Size(89, 15)
         Label1.TabIndex = 17
         Label1.Text = "Tipo de Usuario"
         ' 
+        ' Label_password
+        ' 
+        Label_password.AutoSize = True
+        Label_password.Location = New Point(30, 180)
+        Label_password.Name = "Label_password"
+        Label_password.Size = New Size(42, 15)
+        Label_password.TabIndex = 19
+        Label_password.Text = "Senha:"
+        ' 
+        ' txtInputPassword
+        ' 
+        txtInputPassword.BorderStyle = BorderStyle.FixedSingle
+        txtInputPassword.Location = New Point(30, 198)
+        txtInputPassword.Name = "txtInputPassword"
+        txtInputPassword.Size = New Size(212, 23)
+        txtInputPassword.TabIndex = 18
+        ' 
+        ' Label_confirmPassword
+        ' 
+        Label_confirmPassword.AutoSize = True
+        Label_confirmPassword.Location = New Point(248, 179)
+        Label_confirmPassword.Name = "Label_confirmPassword"
+        Label_confirmPassword.Size = New Size(104, 15)
+        Label_confirmPassword.TabIndex = 21
+        Label_confirmPassword.Text = "Confirme a Senha:"
+        ' 
+        ' txtInputConfirmPassword
+        ' 
+        txtInputConfirmPassword.BorderStyle = BorderStyle.FixedSingle
+        txtInputConfirmPassword.Location = New Point(248, 197)
+        txtInputConfirmPassword.Name = "txtInputConfirmPassword"
+        txtInputConfirmPassword.Size = New Size(211, 23)
+        txtInputConfirmPassword.TabIndex = 20
+        ' 
         ' CadastroUsuario
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(658, 307)
+        Controls.Add(Label_confirmPassword)
+        Controls.Add(txtInputConfirmPassword)
+        Controls.Add(Label_password)
+        Controls.Add(txtInputPassword)
         Controls.Add(Label1)
         Controls.Add(CbSelectPerm)
         Controls.Add(Label_Gender)
         Controls.Add(CbGender)
         Controls.Add(dtBirth)
         Controls.Add(TextBox5)
-        Controls.Add(Label_LastName)
-        Controls.Add(txtLastName)
+        Controls.Add(Label_Name)
+        Controls.Add(txtName)
         Controls.Add(Label_dtBirth)
-        Controls.Add(Label_FirstName)
-        Controls.Add(txtFirstName)
+        Controls.Add(Label_Username)
+        Controls.Add(txtUsername)
         Controls.Add(Panel1)
         Controls.Add(Label_Email)
         Controls.Add(txtEmail)
@@ -232,15 +274,19 @@ Partial Class CadastroUsuario
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Titulo As Label
     Friend WithEvents Btn_back As Button
-    Friend WithEvents Label_FirstName As Label
-    Friend WithEvents txtFirstName As TextBox
+    Friend WithEvents Label_Username As Label
+    Friend WithEvents txtUsername As TextBox
     Friend WithEvents Label_dtBirth As Label
-    Friend WithEvents Label_LastName As Label
-    Friend WithEvents txtLastName As TextBox
+    Friend WithEvents Label_Name As Label
+    Friend WithEvents txtName As TextBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents dtBirth As DateTimePicker
     Friend WithEvents CbGender As ComboBox
     Friend WithEvents Label_Gender As Label
     Friend WithEvents CbSelectPerm As ComboBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label_password As Label
+    Friend WithEvents txtInputPassword As TextBox
+    Friend WithEvents Label_confirmPassword As Label
+    Friend WithEvents txtInputConfirmPassword As TextBox
 End Class

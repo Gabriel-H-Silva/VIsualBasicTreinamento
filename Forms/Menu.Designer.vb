@@ -27,79 +27,113 @@ Partial Class Menu
         Btn_Exit = New Button()
         Panel1 = New Panel()
         Btn_lucker = New Button()
+        Button1 = New Button()
+        Panel_Infinit = New Panel()
+        txtUsername_Title = New Label()
+        Panel3 = New Panel()
+        Panel2 = New Panel()
+        txtSaldo = New Label()
+        Label2 = New Label()
         Panel1.SuspendLayout()
+        Panel_Infinit.SuspendLayout()
+        Panel3.SuspendLayout()
+        Panel2.SuspendLayout()
         SuspendLayout()
         ' 
         ' Btn_New
         ' 
-        Btn_New.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Btn_New.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        resources.ApplyResources(Btn_New, "Btn_New")
         Btn_New.Cursor = Cursors.Hand
-        Btn_New.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Btn_New.ForeColor = SystemColors.InfoText
-        Btn_New.Image = CType(resources.GetObject("Btn_New.Image"), Image)
-        Btn_New.Location = New Point(6, 3)
         Btn_New.Name = "Btn_New"
-        Btn_New.Size = New Size(109, 95)
-        Btn_New.TabIndex = 4
-        Btn_New.Text = "Cadastrar Usuario"
-        Btn_New.TextAlign = ContentAlignment.BottomCenter
-        Btn_New.TextImageRelation = TextImageRelation.ImageAboveText
         Btn_New.UseVisualStyleBackColor = True
         ' 
         ' Btn_Exit
         ' 
-        Btn_Exit.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Btn_Exit.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        resources.ApplyResources(Btn_Exit, "Btn_Exit")
         Btn_Exit.ForeColor = SystemColors.InfoText
-        Btn_Exit.Image = CType(resources.GetObject("Btn_Exit.Image"), Image)
-        Btn_Exit.Location = New Point(6, 400)
         Btn_Exit.Name = "Btn_Exit"
-        Btn_Exit.Size = New Size(109, 91)
-        Btn_Exit.TabIndex = 4
-        Btn_Exit.Text = "Fechar"
-        Btn_Exit.TextAlign = ContentAlignment.BottomCenter
         Btn_Exit.UseVisualStyleBackColor = True
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = SystemColors.Window
         Panel1.BorderStyle = BorderStyle.FixedSingle
+        Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(Btn_lucker)
         Panel1.Controls.Add(Btn_Exit)
         Panel1.Controls.Add(Btn_New)
-        Panel1.Location = New Point(2, 12)
+        resources.ApplyResources(Panel1, "Panel1")
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(125, 496)
-        Panel1.TabIndex = 0
         ' 
         ' Btn_lucker
         ' 
-        Btn_lucker.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Btn_lucker.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        resources.ApplyResources(Btn_lucker, "Btn_lucker")
         Btn_lucker.Cursor = Cursors.Hand
-        Btn_lucker.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Btn_lucker.ForeColor = SystemColors.InfoText
-        Btn_lucker.Image = CType(resources.GetObject("Btn_lucker.Image"), Image)
-        Btn_lucker.Location = New Point(6, 299)
         Btn_lucker.Name = "Btn_lucker"
-        Btn_lucker.Size = New Size(109, 95)
-        Btn_lucker.TabIndex = 5
-        Btn_lucker.Text = "Cassino"
-        Btn_lucker.TextAlign = ContentAlignment.BottomCenter
-        Btn_lucker.TextImageRelation = TextImageRelation.ImageAboveText
         Btn_lucker.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        resources.ApplyResources(Button1, "Button1")
+        Button1.ForeColor = SystemColors.InfoText
+        Button1.Name = "Button1"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Panel_Infinit
+        ' 
+        Panel_Infinit.BackColor = SystemColors.HotTrack
+        Panel_Infinit.BorderStyle = BorderStyle.FixedSingle
+        Panel_Infinit.Controls.Add(Panel2)
+        Panel_Infinit.Controls.Add(Panel3)
+        resources.ApplyResources(Panel_Infinit, "Panel_Infinit")
+        Panel_Infinit.Name = "Panel_Infinit"
+        ' 
+        ' txtUsername_Title
+        ' 
+        resources.ApplyResources(txtUsername_Title, "txtUsername_Title")
+        txtUsername_Title.Name = "txtUsername_Title"
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = SystemColors.ControlLight
+        Panel3.Controls.Add(txtUsername_Title)
+        resources.ApplyResources(Panel3, "Panel3")
+        Panel3.Name = "Panel3"
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = SystemColors.ControlLight
+        Panel2.Controls.Add(Label2)
+        Panel2.Controls.Add(txtSaldo)
+        resources.ApplyResources(Panel2, "Panel2")
+        Panel2.Name = "Panel2"
+        ' 
+        ' txtSaldo
+        ' 
+        resources.ApplyResources(txtSaldo, "txtSaldo")
+        txtSaldo.Name = "txtSaldo"
+        ' 
+        ' Label2
+        ' 
+        resources.ApplyResources(Label2, "Label2")
+        Label2.Name = "Label2"
         ' 
         ' Menu
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        resources.ApplyResources(Me, "$this")
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(130, 520)
+        Controls.Add(Panel_Infinit)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Name = "Menu"
-        Text = "Menu"
         Panel1.ResumeLayout(False)
+        Panel_Infinit.ResumeLayout(False)
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -108,6 +142,11 @@ Partial Class Menu
     Friend WithEvents Btn_Exit As Button
     Friend WithEvents Btn_New As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents Btn_lucker As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Panel_Infinit As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents txtSaldo As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents txtUsername_Title As Label
 End Class

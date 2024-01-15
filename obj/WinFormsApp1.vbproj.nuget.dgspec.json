@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Software\\source\\repos\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.vbproj": {}
+    "C:\\Users\\Software\\source\\repos\\Baisc\\VIsualBasicTreinamento\\WinFormsApp1.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\Software\\source\\repos\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.vbproj": {
+    "C:\\Users\\Software\\source\\repos\\Baisc\\VIsualBasicTreinamento\\WinFormsApp1.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Software\\source\\repos\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.vbproj",
+        "projectUniqueName": "C:\\Users\\Software\\source\\repos\\Baisc\\VIsualBasicTreinamento\\WinFormsApp1.vbproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "C:\\Users\\Software\\source\\repos\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.vbproj",
+        "projectPath": "C:\\Users\\Software\\source\\repos\\Baisc\\VIsualBasicTreinamento\\WinFormsApp1.vbproj",
         "packagesPath": "C:\\Users\\Software\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Software\\source\\repos\\WinFormsApp1\\WinFormsApp1\\obj\\",
+        "outputPath": "C:\\Users\\Software\\source\\repos\\Baisc\\VIsualBasicTreinamento\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Software\\AppData\\Roaming\\NuGet\\NuGet.Config",

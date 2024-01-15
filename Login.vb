@@ -1,9 +1,17 @@
-﻿Public Class Login
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim Email As String
+﻿Imports Google.Protobuf.WellKnownTypes
+Imports WinFormsApp1.Accounts
+
+Public Class Login
+
+
+    Private Sub Btn_login_Click(sender As Object, e As EventArgs) Handles Btn_login.Click
+        Dim Account As New Account.EventReceiver
+        Dim UserId As Integer
+
+        Dim Username As String
         'Verificador se o primeiro Nome foi escrito
-        If Not String.IsNullOrEmpty(txtEmail.Text) Then
-            Email = txtEmail.Text
+        If Not String.IsNullOrEmpty(txtUsername.Text) Then
+            Username = txtUsername.Text
         Else
             MsgBox("Insira o Email")
             Return
@@ -18,6 +26,11 @@
             Return
         End If
 
-
+        UserId = Account.LoginUser(Username, Senha)
+        If UserId > 0 Then
+            Me.Hide()
+            Menu.Show()
+            Menu.Menu_Load(UserId)
+        End If
     End Sub
 End Class
